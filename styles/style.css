@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* SECTION body  */
+body {
+  background-color: #272727;
+  color: white;
+  font-family: "Baloo 2", cursive;
+}
+
+/* SECTION section class="animation-wrapper"  */
+/* !SECTION section  */
+/* SECTION header  */
+header {
+  /* SECTION nav  */
+  /* !SECTION nav  */
+}
+header nav {
+  box-shadow: 0 8px -6px 6px black;
+  /* SECTION ul  */
+  /* !SECTION ul  */
+}
+header nav ul {
+  display: flex;
+  /* SECTION li  */
+  /* !SECTION li  */
+  /* SECTION li  */
+  /* SECTION a href="#"  */
+  /* !SECTION a  */
+  /* !SECTION li  */
+  /* SECTION li  */
+  /* SECTION a href="#"  */
+  /* !SECTION a  */
+  /* !SECTION li  */
+}
+header nav ul li {
+  padding: 1rem;
+  /* SECTION a href="#"  */
+  /* !SECTION a  */
+}
+header nav ul li a {
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+}
+header nav ul li a:hover {
+  color: yellow;
+}
+
+/* !SECTION header  */
+/* SECTION main  */
+main {
+  /* SECTION section class="main-part"  */
+}
+main section.main-part {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  /* SECTION h1  */
+  /* !SECTION h1  */
+}
+main section.main-part h1 {
+  font-size: 3rem;
+}
+main section.main-part p {
+  font-size: 1.15rem;
+}
+
+/* SECTION div class="buttons"  */
+.btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  margin: 1rem 0.5rem;
+  /* SECTION button class="btn sort-descending"  */
+  /* !SECTION button  */
+  /* SECTION button class="btn sort-ascending"  */
+  /* !SECTION button  */
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+/* !SECTION div  */
+/* SECTION div class="all-inputs"  */
+div.all-inputs {
+  /* SECTION form  */
+  /* !SECTION form  */
+}
+div.all-inputs form {
+  /* SECTION div class="grader"  */
+  /* SECTION input
+            type="text"
+            placeholder="class category"
+            class="class-type"
+            list="opt"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="class number"
+            class="class-number"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="credits"
+            min="0"
+            max="6"
+            class="class-credit"
+            */
+  /* !SECTION input  */
+  /* SECTION select name="select" class="select"  */
+  /* SECTION option value=""  */
+  /* !SECTION option  */
+  /* SECTION option value="A"  */
+  /* !SECTION option  */
+  /* SECTION option value="A-"  */
+  /* !SECTION option  */
+  /* SECTION option value="B+"  */
+  /* !SECTION option  */
+  /* SECTION option value="B"  */
+  /* !SECTION option  */
+  /* SECTION option value="B-"  */
+  /* !SECTION option  */
+  /* SECTION option value="C+"  */
+  /* !SECTION option  */
+  /* SECTION option value="C"  */
+  /* !SECTION option  */
+  /* SECTION option value="C-"  */
+  /* !SECTION option  */
+  /* SECTION option value="D+"  */
+  /* !SECTION option  */
+  /* SECTION option value="D"  */
+  /* !SECTION option  */
+  /* SECTION option value="D-"  */
+  /* !SECTION option  */
+  /* SECTION option value="F"  */
+  /* !SECTION option  */
+  /* !SECTION select  */
+  /* SECTION button class="trash-button"  */
+  /* !SECTION button  */
+  /* !SECTION div  */
+  /* !SECTION form  */
+  /* SECTION form  */
+  /* SECTION div class="grader"  */
+  /* SECTION input
+            type="text"
+            placeholder="class category"
+            class="class-type"
+            list="opt"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="class number"
+            class="class-number"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="credits"
+            min="0"
+            max="6"
+            class="class-credit"
+            */
+  /* !SECTION input  */
+  /* SECTION select name="select" class="select"  */
+  /* SECTION option value=""  */
+  /* !SECTION option  */
+  /* SECTION option value="A"  */
+  /* !SECTION option  */
+  /* SECTION option value="A-"  */
+  /* !SECTION option  */
+  /* SECTION option value="B+"  */
+  /* !SECTION option  */
+  /* SECTION option value="B"  */
+  /* !SECTION option  */
+  /* SECTION option value="B-"  */
+  /* !SECTION option  */
+  /* SECTION option value="C+"  */
+  /* !SECTION option  */
+  /* SECTION option value="C"  */
+  /* !SECTION option  */
+  /* SECTION option value="C-"  */
+  /* !SECTION option  */
+  /* SECTION option value="D+"  */
+  /* !SECTION option  */
+  /* SECTION option value="D"  */
+  /* !SECTION option  */
+  /* SECTION option value="D-"  */
+  /* !SECTION option  */
+  /* SECTION option value="F"  */
+  /* !SECTION option  */
+  /* !SECTION select  */
+  /* SECTION button class="trash-button"  */
+  /* SECTION i class="fas fa-trash"  */
+  /* !SECTION i  */
+  /* !SECTION button  */
+  /* !SECTION div  */
+  /* !SECTION form  */
+  /* SECTION form  */
+  /* SECTION div class="grader"  */
+  /* SECTION input
+            type="text"
+            placeholder="class category"
+            class="class-type"
+            list="opt"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="class number"
+            class="class-number"
+            */
+  /* !SECTION input  */
+  /* SECTION input
+            type="text"
+            placeholder="credits"
+            min="0"
+            max="6"
+            class="class-credit"
+            */
+  /* !SECTION input  */
+  /* SECTION select name="select" class="select"  */
+  /* SECTION option value=""  */
+  /* !SECTION option  */
+  /* SECTION option value="A"  */
+  /* !SECTION option  */
+  /* SECTION option value="A-"  */
+  /* !SECTION option  */
+  /* SECTION option value="B+"  */
+  /* !SECTION option  */
+  /* SECTION option value="B"  */
+  /* !SECTION option  */
+  /* SECTION option value="B-"  */
+  /* !SECTION option  */
+  /* SECTION option value="C+"  */
+  /* !SECTION option  */
+  /* SECTION option value="C"  */
+  /* !SECTION option  */
+  /* SECTION option value="C-"  */
+  /* !SECTION option  */
+  /* SECTION option value="D+"  */
+  /* !SECTION option  */
+  /* SECTION option value="D"  */
+  /* !SECTION option  */
+  /* SECTION option value="D-"  */
+  /* !SECTION option  */
+  /* SECTION option value="F"  */
+  /* !SECTION option  */
+  /* !SECTION select  */
+  /* SECTION button class="trash-button"  */
+  /* SECTION i class="fas fa-trash"  */
+  /* !SECTION i  */
+  /* !SECTION button  */
+  /* !SECTION div  */
+}
+div.all-inputs form input,
+div.all-inputs form select {
+  font-size: 1.05rem;
+  padding: 0.5rem;
+  border: 0.25px solid rgb(39, 39, 21);
+  margin: 0.35rem;
+  border-radius: 0.25rem;
+}
+div.all-inputs form input.class-credit {
+  width: 15%;
+}
+div.all-inputs form button {
+  border: none;
+  cursor: pointer;
+  background-color: #272727;
+  /* SECTION i class="fas fa-trash"  */
+  /* !SECTION i  */
+}
+div.all-inputs form button i {
+  font-size: 1.25rem;
+  pointer-events: none;
+  color: white;
+}
+
+/* !SECTION div  */
+/* SECTION button type=".button" class="plus-button"  */
+button.plus-button {
+  background-color: white;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 3rem 0rem;
+  cursor: pointer;
+  /* SECTION i class="fas fa-plus-button"  */
+  /* !SECTION i  */
+}
+button.plus-button i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+/* !SECTION button  */
+/* SECTION div class="result"  */
+div.result {
+  width: 200px;
+  height: 200px;
+  border: 3px solid red;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  animation-name: border-color;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  /* SECTION p id="gpa-text"  */
+  /* !SECTION p  */
+  /* SECTION h1 class="result-gpa"  */
+  /* !SECTION h1  */
+}
+div.result p {
+  margin-top: 15px;
+}
+div.result h2#result-gpa {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+/* !SECTION div  */
+/* !SECTION section  */
+/* !SECTION main  */
+/* SECTION datalist id="opt"  */
+/* SECTION option value="ACCT"  */
+/* !SECTION option  */
+/* SECTION option value="ASL"  */
+/* !SECTION option  */
+/* SECTION option value="ANTH"  */
+/* !SECTION option  */
+/* SECTION option value="ART"  */
+/* !SECTION option  */
+/* SECTION option value="BIOL"  */
+/* !SECTION option  */
+/* SECTION option value="BUSM"  */
+/* !SECTION option  */
+/* SECTION option value="CRDEV"  */
+/* !SECTION option  */
+/* SECTION option value="CHEM"  */
+/* !SECTION option  */
+/* SECTION option value="CHIN"  */
+/* !SECTION option  */
+/* SECTION option value="COMM"  */
+/* !SECTION option  */
+/* SECTION option value="CIS"  */
+/* !SECTION option  */
+/* SECTION option value="CS"  */
+/* !SECTION option  */
+/* SECTION option value="CRMJ"  */
+/* !SECTION option  */
+/* SECTION option value="ECON"  */
+/* !SECTION option  */
+/* SECTION option value="EDU"  */
+/* !SECTION option  */
+/* SECTION option value="ELED"  */
+/* !SECTION option  */
+/* SECTION option value="EMGT"  */
+/* !SECTION option  */
+/* SECTION option value="ENGL"  */
+/* !SECTION option  */
+/* SECTION option value="EIL"  */
+/* !SECTION option  */
+/* SECTION option value="ENTR"  */
+/* !SECTION option  */
+/* SECTION option value="EXS"  */
+/* !SECTION option  */
+/* SECTION option value="FILM"  */
+/* !SECTION option  */
+/* SECTION option value="FIN"  */
+/* !SECTION option  */
+/* SECTION option value="FORS"  */
+/* !SECTION option  */
+/* SECTION option value="FREN"  */
+/* !SECTION option  */
+/* SECTION option value="GEOG"  */
+/* !SECTION option  */
+/* SECTION option value="HAWN"  */
+/* !SECTION option  */
+/* SECTION option value="HWST"  */
+/* !SECTION option  */
+/* SECTION option value="HLTH"  */
+/* !SECTION option  */
+/* SECTION option value="HIST"  */
+/* !SECTION option  */
+/* SECTION option value="HEC"  */
+/* !SECTION option  */
+/* SECTION option value="HTM"  */
+/* !SECTION option  */
+/* SECTION option value="HUM"  */
+/* !SECTION option  */
+/* SECTION option value="IS"  */
+/* !SECTION option  */
+/* SECTION option value="IT"  */
+/* !SECTION option  */
+/* SECTION option value="ICS"  */
+/* !SECTION option  */
+/* SECTION option value="IPB"  */
+/* !SECTION option  */
+/* SECTION option value="JPN"  */
+/* !SECTION option  */
+/* SECTION option value="LING"  */
+/* !SECTION option  */
+/* SECTION option value="AMOR"  */
+/* !SECTION option  */
+/* SECTION option value="MATH"  */
+/* !SECTION option  */
+/* SECTION option value="MUSC"  */
+/* !SECTION option  */
+/* SECTION option value="OCEN"  */
+/* !SECTION option  */
+/* SECTION option value="PAIS"  */
+/* !SECTION option  */
+/* SECTION option value="PHSC"  */
+/* !SECTION option  */
+/* SECTION option value="POSC"  */
+/* !SECTION option  */
+/* SECTION option value="PSYC"  */
+/* !SECTION option  */
+/* SECTION option value="PMGT"  */
+/* !SECTION option  */
+/* SECTION option value="REL"  */
+/* !SECTION option  */
+/* SECTION option value="SCI"  */
+/* !SECTION option  */
+/* SECTION option value="SAMN"  */
+/* !SECTION option  */
+/* SECTION option value="SCED"  */
+/* !SECTION option  */
+/* SECTION option value="SOCW"  */
+/* !SECTION option  */
+/* SECTION option value="SPAN"  */
+/* !SECTION option  */
+/* SECTION option value="SPED"  */
+/* !SECTION option  */
+/* SECTION option value="STDEV"  */
+/* !SECTION option  */
+/* SECTION option value="TESOL"  */
+/* !SECTION option  */
+/* SECTION option value="THEA"  */
+/* !SECTION option  */
+/* SECTION option value="TONG"  */
+/* !SECTION option  */
+/* SECTION option value="WLNG"  */
+/* !SECTION option  */
+/* !SECTION datalist  */
+/* SECTION script src="./app.js"  */
+/* !SECTION script  */
+/* !SECTION body  */
+@keyframes border-color {
+  0% {
+    border-color: red;
+  }
+  33% {
+    border-color: limegreen;
+  }
+  0% {
+    border-color: yellow;
+  }
+}/*# sourceMappingURL=style.css.map */
