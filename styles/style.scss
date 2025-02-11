@@ -503,3 +503,13 @@ body {
     border-color: yellow;
   }
 }
+
+//新增格放大動畫
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
