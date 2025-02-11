@@ -142,7 +142,7 @@ allSelects.forEach((select) => {
   });
 });
 
-//select根據ABCD+-變換顏色
+//credits setGPA
 let credits = document.querySelectorAll(".class-credit");
 credits.forEach((credit) => {
   credit.addEventListener("change", (e) => {
@@ -150,6 +150,7 @@ credits.forEach((credit) => {
   });
 });
 
+//添加鈕 新增列功能
 let addButton = document.querySelector(".plus-button");
 addButton.addEventListener("click", () => {
   let newForm = document.createElement("form");
@@ -254,6 +255,15 @@ addButton.addEventListener("click", () => {
   newButton.classList.add("trash-button");
   newButton.addEventListener("click", (e) => {
     e.preventDefault();
+    e.target.parentElement.parentElement.style.animation =
+      "scaleDown 0.5s ease forwards";
+    e.target.parentElement.parentElement.addEventListener(
+      "animationend",
+      (e) => {
+        e.target.remove();
+        setGPA();
+      }
+    );
   });
   let newItag = document.createElement("i");
   newItag.classList.add("fas");
@@ -269,4 +279,26 @@ addButton.addEventListener("click", () => {
   newForm.appendChild(newDiv);
   document.querySelector(".all-inputs").appendChild(newForm);
   newForm.style.animation = "scaleUp 0.5s ease forwards";
+});
+
+//trash button remove
+let allTrash = document.querySelectorAll(".trash-button");
+allTrash.forEach((trash) => {
+  trash.addEventListener("click", (e) => {
+    //console.log(e.target.parentElement.parentElement);  找父輩form
+    //e.target.parentElement.parentElement.remove(); 刪form->改為動畫
+
+    //REVIEW remo_ani 1.每個trash父輩classList加remove
+    e.target.parentElement.parentElement.classList.add("remove");
+  });
+});
+
+//trash button remove
+allTrash.forEach((trash) => {
+  let form = trash.parentElement.parentElement;
+  form.addEventListener("transitionend", (e) => {
+    //REVIEW remo_ani 3.每個trash父輩transitionend執行remove
+    e.target.remove();
+    setGPA();
+  });
 });
