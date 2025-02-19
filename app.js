@@ -1,23 +1,23 @@
-// let hero = document.querySelector(".hero");
-// let slider = document.querySelector(".slider");
-// let animation = document.querySelector("section.animation-wrapper");
+let hero = document.querySelector(".hero");
+let slider = document.querySelector(".slider");
+let animation = document.querySelector("section.animation-wrapper");
 
-// const time_line = new TimelineMax();
+const time_line = new TimelineMax();
 
-// time_line
-//   .fromTo(hero, 1, { height: "0%" }, { height: "100%", ease: Power2.easeInOut })
-//   .fromTo(
-//     hero,
-//     1.2,
-//     { width: "80%" },
-//     { width: "100%", ease: Power2.easeInOut }
-//   )
-//   .fromTo(slider, 1, { x: "-100%" }, { x: "0%" }, "-=1.2")
-//   .fromTo(animation, 0.3, { opacity: 1 }, { opacity: 0 });
+time_line
+  .fromTo(hero, 1, { height: "0%" }, { height: "100%", ease: Power2.easeInOut })
+  .fromTo(
+    hero,
+    1.2,
+    { width: "80%" },
+    { width: "100%", ease: Power2.easeInOut }
+  )
+  .fromTo(slider, 1, { x: "-100%" }, { x: "0%" }, "-=1.2")
+  .fromTo(animation, 0.3, { opacity: 1 }, { opacity: 0 });
 
-// setTimeout(() => {
-//   animation.style.pointerEvents = "none";
-// }, 2500);
+setTimeout(() => {
+  animation.style.pointerEvents = "none";
+}, 2500);
 
 function changeColor(target) {
   if (target.value == "A" || target.value == "A-") {
@@ -138,6 +138,7 @@ allbutton.forEach((button) => {
 let allSelects = document.querySelectorAll("select");
 allSelects.forEach((select) => {
   select.addEventListener("change", (e) => {
+    setGPA();
     changeColor(e.target);
   });
 });
@@ -314,14 +315,15 @@ btn2.addEventListener("click", () => {
 });
 
 function handleSorting(direction) {
-  let graders = document.querySelectorAll("div-grader");
+  let graders = document.querySelectorAll("div.grader");
   let objectArray = [];
+  //console.log(objectArray.length);
 
   for (let i = 0; i < graders.length; i++) {
     let class_name = graders[i].children[0].value;
-    let class_number = graders[i].children[0].value;
-    let class_credit = graders[i].children[0].value;
-    let class_grade = graders[i].children[0].value;
+    let class_number = graders[i].children[1].value;
+    let class_credit = graders[i].children[2].value;
+    let class_grade = graders[i].children[3].value;
 
     if (
       !(
@@ -337,13 +339,211 @@ function handleSorting(direction) {
         class_credit,
         class_grade,
       };
+      objectArray.push(class_object);
     }
-    objectArray.push(class_object);
   }
 
   for (let i = 0; i < objectArray.length; i++) {
     objectArray[i].class_grade_number = convertor(objectArray[i].class_grade);
+    //console.log(objectArray.length);
   }
+
+  objectArray = mergeSort(objectArray);
+  if (direction == "descending") {
+    objectArray = objectArray.reverse();
+  }
+
+  let allInputs = document.querySelector(".all-inputs");
+  allInputs.innerHTML = "";
+
+  console.log(objectArray.length);
+  for (let i = 0; i < objectArray.length; i++) {
+    console.log(objectArray.length);
+    allInputs.innerHTML += `
+  <form>
+    <div class="grader">
+      <input
+        type="text"
+        placeholder="class category"
+        class="class-type"
+        list="opt"
+        value=${objectArray[i].class_name}
+      /><!--
+        --><input
+        type="text"
+        placeholder="class number"
+        class="class-number"
+        value=${objectArray[i].class_number}
+      /><!--
+      --><input
+        type="number"
+        placeholder="credits"
+        min="0"
+        max="6"
+        class="class-credit"
+        value=${objectArray[i].class_credit}
+
+      /><!--
+      --><select name="select" class="select">
+        <option value=""></option>
+        <option value="A">A</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B">B</option>
+        <option value="B-">B-</option>
+        <option value="C+">C+</option>
+        <option value="C">C</option>
+        <option value="C-">C-</option>
+        <option value="D+">D+</option>
+        <option value="D">D</option>
+        <option value="D-">D-</option>
+        <option value="F">F</option>
+      </select><!--
+      -->
+      <button class="trash-button"><i class="fas fa-trash"></i></button>
+    </div>
+  </form>
+  
+  <datalist id="opt">
+      <option value="ACCT">Accounting</option>
+      <option value="ASL">American Sign Language</option>
+      <option value="ANTH">Anthropology</option>
+      <option value="ART">Art</option>
+      <option value="BIOL">Biological Science</option>
+      <option value="BUSM">Business Mgt</option>
+      <option value="CRDEV">Career Development</option>
+      <option value="CHEM">Chemistry</option>
+      <option value="CHIN">Chinese</option>
+      <option value="COMM">Communication Studies</option>
+      <option value="CIS">Computer &amp; Information Sciences</option>
+      <option value="CS">Computer Science</option>
+      <option value="CRMJ">Criminal Justice</option>
+      <option value="ECON">Economics</option>
+      <option value="EDU">Education</option>
+      <option value="ELED">Elementary Education</option>
+      <option value="EMGT">Emergency Management</option>
+      <option value="ENGL">English</option>
+      <option value="EIL">English as Int'l Language</option>
+      <option value="ENTR">Entrepreneurship</option>
+      <option value="EXS">Exercise Sport Science</option>
+      <option value="FILM">Film</option>
+      <option value="FIN">Finance</option>
+      <option value="FORS">Forensic Science</option>
+      <option value="FREN">French</option>
+      <option value="GEOG">Geography</option>
+      <option value="HAWN">Hawaiian</option>
+      <option value="HWST">Hawaiian Studies</option>
+      <option value="HLTH">Health</option>
+      <option value="HIST">History</option>
+      <option value="HEC">Home Economics</option>
+      <option value="HTM">Hospitality Tourism Mgt</option>
+      <option value="HUM">Humanities</option>
+      <option value="IS">Information System</option>
+      <option value="IT">Information Technology</option>
+      <option value="ICS">International Cultural Studies</option>
+      <option value="IPB">Intercultural Peacebuilding</option>
+      <option value="JPN">Japanese</option>
+      <option value="LING">Linguistics</option>
+      <option value="AMOR">Maori</option>
+      <option value="MATH">Mathematics</option>
+      <option value="MUSC">Music</option>
+      <option value="OCEN">Oceanography</option>
+      <option value="PAIS">Pacific Island Studies</option>
+      <option value="PHSC">Physical Science</option>
+      <option value="POSC">Political Science</option>
+      <option value="PSYC">Psychology</option>
+      <option value="PMGT">Public Management</option>
+      <option value="REL">Religion</option>
+      <option value="SCI">Science</option>
+      <option value="SAMN">Samoan</option>
+      <option value="SCED">Secondary Education</option>
+      <option value="SOCW">Social Work</option>
+      <option value="SPAN">Spanish</option>
+      <option value="SPED">Special Education</option>
+      <option value="STDEV">Student Development</option>
+      <option value="TESOL">TESOL</option>
+      <option value="THEA">Theatre</option>
+      <option value="TONG">Tongan</option>
+      <option value="WLNG">World Language</option>
+    </datalist>
+  `;
+  }
+
+  //select可直接用JS更改
+  graders = document.querySelectorAll("div.grader");
+  for (let i = 0; i < graders.length; i++) {
+    graders[i].children[3].value = objectArray[i].class_grade;
+  }
+
+  // for (let i = 0; i < objectArray.length; i++) {
+  //   console.log(objectArray[i].class_name);
+  //   if (objectArray[i].class_name == "/") {
+  //     objectArray[i].class_name = "";
+  //   }
+  // }
+
+  //綁select事件
+  allSelects = document.querySelectorAll("select");
+  allSelects.forEach((select) => {
+    changeColor(select);
+    select.addEventListener("change", (e) => {
+      setGPA();
+      changeColor(e.target);
+    });
+  });
+
+  //綁type事件  點選時清空內容"/"使選單運作
+  types = document.querySelectorAll(".class-type");
+  types.forEach((type) => {
+    type.addEventListener("click", (e) => {
+      if (e.target.value == "/") {
+        e.target.value = "";
+      }
+    });
+  });
+
+  //綁credit事件
+  credits = document.querySelectorAll(".class-credit");
+  credits.forEach((credit) => {
+    credit.addEventListener("change", (e) => {
+      setGPA();
+    });
+  });
+
+  //綁trash button事件
+  //trash button remove
+  allTrash = document.querySelectorAll(".trash-button");
+  allTrash.forEach((trash) => {
+    trash.addEventListener("click", (e) => {
+      //console.log(e.target.parentElement.parentElement);  找父輩form
+      //e.target.parentElement.parentElement.remove(); 刪form->改為動畫
+
+      //REVIEW remo_ani 1.每個trash父輩classList加remove
+      e.target.parentElement.parentElement.classList.add("remove");
+    });
+    trash.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.target.parentElement.parentElement.style.animation =
+        "scaleDown 0.5s ease forwards";
+      e.target.parentElement.parentElement.addEventListener(
+        "animationend",
+        (e) => {
+          e.target.remove();
+          setGPA();
+        }
+      );
+    });
+  });
+
+  //trash button remove
+  allTrash.forEach((trash) => {
+    let form = trash.parentElement.parentElement;
+    form.addEventListener("transitionend", (e) => {
+      //REVIEW remo_ani 3.每個trash父輩transitionend執行remove
+      e.target.remove();
+      setGPA();
+    });
+  });
 }
 
 function merge(a1, a2) {
